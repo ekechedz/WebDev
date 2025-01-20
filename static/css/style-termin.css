@@ -1,0 +1,238 @@
+/* Form Container */
+.form-container {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 800px;
+    height: 600px;
+    margin: 50px auto;
+    text-align: center;
+    color: black;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #535147;
+}
+
+/* Slider */
+.slider-container {
+    position: relative;
+}
+
+.slider {
+    width: 100%;
+    appearance: none;
+    height: 8px;
+    background: #ddd;
+    outline: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.slider:hover {
+    background: #ccc;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #484642;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    background: #46453f;
+}
+
+
+.slider-value {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.calendar {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 350px;
+    padding: 20px;
+    text-align: center;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.nav-button {
+    background: #5c8e85;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background: #4e7c74;
+}
+
+.weekdays,
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.weekdays div,
+.days div {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weekdays div {
+    font-weight: bold;
+    color: #555;
+}
+
+.days div {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.days div:hover {
+    background-color: #f0f0f0;
+}
+
+.days .today {
+    background: #5c8e85;
+    color: #fff;
+}
+
+.days .disabled {
+    color: #ccc;
+    pointer-events: none;
+}
+.duration-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.arrow svg {
+    width: 15px;
+    height: 15px;
+    fill: #5c8e85;
+    transition: fill 0.3s;
+}
+
+.arrow:hover svg {
+    fill: #3c6f64;
+}
+
+.duration-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.duration-button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.duration-button:hover {
+    background-color: #f9f9f9;
+    border-color: #ffcc00;
+}
+
+.duration-button .duration-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.duration-button .duration-unit {
+    font-size: 12px;
+    color: #555;
+}
+
+.duration-button.active {
+    background-color: #ffcc00;
+    color: #fff;
+    border-color: #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .form-container {
+        padding: 20px;
+        width: 90%;
+    }
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/all.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css">
+    <link rel="shortcut icon" href="../../static/images/logo_inverted_transparent.png" type="image/x-icon">
+    <title>Client Reservation Form</title>
+    <link rel="stylesheet" href="../static/css/style-termin.css">
+    <link rel="icon" href="../static/images/LOGO-CS.png">
+    <meta name="google-site-verification" content="M2rA1-ISXNAwgnKScW7xugeBITDEVh0h8LOcrxxLAkY" />
+
+</head>
+<header>
+    <nav>
+        <img src="../static/images/LOGO-CS.png">
+        <a class="a" href="#about" style="height: 3em;">ABOUT US</a>
+        <a class="a" href="#services" style="height: 3em;">SERVICESS</a>
+        <a class="a" href="#contacts" style="height: 3em;">CONTACTS</a>
+        <a class="a" href="/Website/templates/reservation.html" style="height: 3em;">TERMIN</a>
+        <a class="a" href="/myAccount" style="height: 3em;" title="My account"><i class="far fa-user"></i></a>
+        <a class="social" href="#"><i class="fab fa-twitter"></i></a>
+        <a class="social" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="social" href="#"><i class="fab fa-facebook"></i></a>
+    </nav>
+    <div class="form-container">
+        <h2>Interactive Form</h2>
+    <div class="calendar">
+        <div class="calendar-header">
+            <button id="prevMonth" class="nav-button">&lt;</button>
+            <h2 id="monthYear"></h2>
+            <button id="nextMonth" class="nav-button">&gt;</button>
+        </div>
+        <div class="calendar-body">
+            <div class="weekdays">
+                <div>Su</div>
+                <div>Mo</div>
+                <div>Tu</div>
+                <div>We</div>
+                <div>Th</div>
+                <div>Fr</div>
+                <div>Sa</div>
+            </div>
+            <div class="days" id="calendarDays"></div>
+        </div>
+    </div>
+        <div class="form-group">
+            <label for="home-size">How large is your home in m²?</label>
+            <input type="number" id="home-size" style="color: black;" placeholder="Enter size in m²">
+        </div>
+    <div class="days" id="days"></div>
+
+    <div class="duration-container">
+        <div class="arrow left">
+            <svg width="10" height="13" viewBox="0 0 10 13" xmlns="http://www.w3.org/2000/svg">
+                <path d="M.5 6.5l9-6v12z" fill="#5c8e85" fill-rule="evenodd"></path>
+            </svg>
+        </div>
+        <div class="duration-buttons">
+            <button class="duration-button">
+                <div>
+                    <span class="duration-value">2</span>
+                    <span class="duration-unit">hours</span>
+                </div>
+            </button>
+            <button class="duration-button">
+                <div>
+                    <span class="duration-value">2.5</span>
+                    <span class="duration-unit">hours</span>
+                </div>
+            </button>
+            <button class="duration-button">
+                <div>
+                    <span class="duration-value">3</span>
+                    <span class="duration-unit">hours</span>
+                </div>
+            </button>
+            <button class="duration-button">
+                <div>
+                    <span class="duration-value">3.5</span>
+                    <span class="duration-unit">hours</span>
+                </div>
+            </button>
+            <button class="duration-button">
+                <div>
+                    <span class="duration-value">4</span>
+                    <span class="duration-unit">hours</span>
+                </div>
+            </button>
+        </div>
+        <div class="arrow right">
+            <svg width="10" height="13" viewBox="0 0 10 13" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.5 6.5l-9-6v12z" fill="#5c8e85" fill-rule="evenodd"></path>
+            </svg>
+        </div>
+    </div>
+
+
+</header>
+
+<body>
+    <script>
+        const buttons = document.querySelectorAll('.duration-button');
+            const leftArrow = document.querySelector('.arrow.left');
+            const rightArrow = document.querySelector('.arrow.right');
+
+            buttons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    buttons.forEach((btn) => btn.classList.remove('active'));
+                    button.classList.add('active');
+                });
+            });
+
+            // Optional: Add functionality to scroll through buttons using arrows
+            leftArrow.addEventListener('click', () => {
+                // Scroll left logic here
+            });
+
+            rightArrow.addEventListener('click', () => {
+                // Scroll right logic here
+            });
+
+           const currentMonthDisplay = document.getElementById('current-month');
+            const daysContainer = document.getElementById('days');
+            let currentDate = new Date();
+
+            function generateCalendar() {
+                const month = currentDate.getMonth();
+                const year = currentDate.getFullYear();
+
+                // Set the current month display
+                currentMonthDisplay.textContent = currentDate.toLocaleString('default', { month: 'long', year: 'numeric' });
+
+                // Clear the previous calendar days
+                daysContainer.innerHTML = '';
+
+                // Get the first day of the month
+                const firstDay = new Date(year, month, 1).getDay();
+
+                // Get the last day of the month
+                const lastDate = new Date(year, month + 1, 0).getDate();
+                console.log(`Month: ${month}, Year: ${year}`);
+                console.log(`First day: ${firstDay}, Last date: ${lastDate}`);
+
+                // Generate empty days for the first week
+                for (let i = 0; i < firstDay; i++) {
+                    const emptyCell = document.createElement('div');
+                    emptyCell.classList.add('day', 'disabled');
+                    daysContainer.appendChild(emptyCell);
+                }
+
+                // Generate the days of the month
+                for (let day = 1; day <= lastDate; day++) {
+                    const dayCell = document.createElement('div');
+                    dayCell.classList.add('day');
+                    dayCell.textContent = day;
+
+                    // Highlight the current day
+                    if (day === currentDate.getDate() && month === currentDate.getMonth() && year === currentDate.getFullYear()) {
+                        dayCell.classList.add('today');
+                    }
+
+                    daysContainer.appendChild(dayCell);
+                }
+            }
+
+            // Change month when user clicks prev/next
+            function changeMonth(offset) {
+                currentDate.setMonth(currentDate.getMonth() + offset);
+                generateCalendar();
+            }
+
+            // Initialize the calendar on page load
+            generateCalendar();
+
+
+                
+
+
+    </script>
+</body>
+
+</html>
