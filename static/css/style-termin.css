@@ -1,238 +1,324 @@
-/* Form Container */
+header {
+	height: 15vh;
+	/* Or use a fixed height like 100px */
+	/* background-image: url(../images/back.png); */
+	background-size: cover;
+	background-position: center;
+	z-index: 100;
+	/* Ensure it stays above the body */
+	animation: header 15s ease-in-out infinite;
+}
+
+body {
+	background-image: url('../images/back.png'); /* Replace with your image path */
+	background-size: cover; /* Ensures the image covers the entire screen */
+	background-repeat: no-repeat; /* Prevents the image from repeating */
+	background-attachment: fixed; /* Makes the background fixed when scrolling */
+	background-position: center; /* Centers the image on the screen */
+
+	margin: 0 auto;
+	font-family: var(--default-font-family);
+	font-size: var(--desktop-font-size);
+}
+
 .form-container {
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    max-width: 800px;
-    height: 600px;
-    margin: 50px auto;
-    text-align: center;
-    color: black;
-}
-
-.form-container h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-}
-
-.form-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #555;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s;
-}
-
-.form-group input:focus {
-    border-color: #535147;
-}
-
-/* Slider */
-.slider-container {
-    position: relative;
-}
-
-.slider {
-    width: 100%;
-    appearance: none;
-    height: 8px;
-    background: #ddd;
-    outline: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.slider:hover {
-    background: #ccc;
-}
-
-.slider::-webkit-slider-thumb {
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #484642;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.slider::-webkit-slider-thumb:hover {
-    background: #46453f;
-}
-
-
-.slider-value {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #333;
-}
-
-.calendar {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 400px;
-    height: 350px;
+	margin: 20px auto; /* Add top margin to separate it from the header */
     padding: 20px;
-    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+	text-align: center;
+}
+
+/* Form heading */
+.form-container h2 {
+	font-size: 20px;
+	margin-bottom: 20px;
+	color: #4e7c74;
+}
+
+/* Calendar styling */
+.calendar {
+	margin: 20px 0;
+	padding: 20px;
+	background: rgba(249, 249, 249, 0.9);
+	/* Slight transparency */
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .calendar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
 }
 
 .calendar-header h2 {
-    margin: 0;
-    font-size: 18px;
+	margin: 0;
+	font-size: 18px;
+	color: #333;
 }
 
 .nav-button {
-    background: #5c8e85;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
+	background: #5adeff;
+	color: #fff;
+	border: none;
+	padding: 8px 12px;
+	border-radius: 6px;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
 .nav-button:hover {
-    background: #4e7c74;
+	background-color: #4e7c74;
 }
 
 .weekdays,
 .days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-}
-
-.weekdays div,
-.days div {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 10px;
 }
 
 .weekdays div {
-    font-weight: bold;
-    color: #555;
+	font-weight: bold;
+	color: #555;
 }
 
 .days div {
-    border-radius: 50%;
-    cursor: pointer;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .days div:hover {
-    background-color: #f0f0f0;
+	background-color: #e0e0e0;
+	transform: scale(1.1);
 }
 
 .days .today {
-    background: #5c8e85;
-    color: #fff;
+	background: #5adeff;
+	color: #fff;
+	font-weight: bold;
+}
+
+.days .selected {
+	background: #4e7c74;
+	color: #fff;
+	font-weight: bold;
 }
 
 .days .disabled {
-    color: #ccc;
-    pointer-events: none;
+	color: #ccc;
+	pointer-events: none;
 }
+
+/* Form input */
+.form-group {
+	margin: 20px 0;
+}
+
+.form-group label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 8px;
+	text-align: left;
+	font-size: 16px;
+	color: #333;
+}
+
+.form-group input {
+	width: 100%;
+	padding: 10px;
+	font-size: 12px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	color: rgba(0, 0, 0, 0.904);
+}
+
+.form-group input:focus {
+	outline-color: #5adeff;
+}
+
+/* Duration container */
 .duration-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	margin: 20px 0;
 }
 
 .arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    user-select: none;
+	cursor: pointer;
 }
 
 .arrow svg {
-    width: 15px;
-    height: 15px;
-    fill: #5c8e85;
-    transition: fill 0.3s;
+	fill: #5c8e85;
+	transition: transform 0.2s ease;
 }
 
 .arrow:hover svg {
-    fill: #3c6f64;
+	transform: scale(1.2);
 }
 
 .duration-buttons {
-    display: flex;
-    gap: 10px;
+	display: flex;
+	gap: 10px;
 }
 
 .duration-button {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	background: #f0f0f0;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .duration-button:hover {
-    background-color: #f9f9f9;
-    border-color: #ffcc00;
+	background-color: #5adeff;
+	color: #fff;
+	transform: scale(1.05);
 }
 
 .duration-button .duration-value {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
+	font-size: 18px;
+	font-weight: bold;
 }
 
 .duration-button .duration-unit {
-    font-size: 12px;
-    color: #555;
+	font-size: 12px;
+	color: #555;
 }
 
-.duration-button.active {
-    background-color: #ffcc00;
-    color: #fff;
-    border-color: #ffcc00;
+.submit-button {
+	background-color: #5adeff;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	border-radius: 8px;
+	cursor: pointer;
+	margin: 20px auto; /* Add some margin around the button */
+    display: inline-block;
+	transition: background-color 0.3s ease;
 }
 
-/* Responsive Design */
+.submit-button:hover {
+	background-color: #4e7c74;
+}
+
 @media (max-width: 768px) {
-    header nav {
-        flex-direction: column;
-        text-align: center;
-    }
+	nav {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-    .form-container {
-        padding: 20px;
-        width: 90%;
-    }
+	nav img {
+		width: 100px;
+	}
+
+	.a,
+	.social {
+		width: 100%;
+		text-align: center;
+		padding: 10px;
+	}
+}
+
+@media (max-width: 768px) {
+		.form-container {
+			margin: 50px auto; /* Reduce the top margin for smaller screens */
+			padding: 15px; /* Adjust padding for better fit */
+		}
+
+
+	.form-group label,
+	.form-group input {
+		font-size: 14px;
+		/* Smaller text for inputs and labels */
+	}
+}
+
+@media (max-width: 768px) {
+	.calendar {
+		padding: 10px;
+	}
+
+	.weekdays div,
+	.days div {
+		font-size: 12px;
+	}
+
+	.days div {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+@media (max-width: 768px) {
+	.duration-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.duration-buttons {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 5px;
+	}
+
+	.duration-button {
+		width: auto;
+		padding: 5px 10px;
+	}
+}
+
+header {
+	background-size: cover;
+	background-position: center;
+}
+
+@media (max-width: 768px) {
+	header {
+		height: 20vh;
+		/* Adjust for smaller screens */
+	}
+
+	body {
+		padding-top: 20vh;
+		/* Match header height */
+	}
+}
+
+
+
+@keyframes body {
+	0% {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/back.png);
+	}
+
+	25% {}
+
+	50% {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/back.png);
+	}
+
+	75% {}
+
+	100% {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/back.png);
+	}
 }

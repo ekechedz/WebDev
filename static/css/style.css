@@ -88,8 +88,10 @@ nav img {
 
 .bottom {
     position: absolute;
-    bottom: 3em;
-    left: 4em;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to ensure the center of the element aligns with the screen center */
+    text-align: center; /* Align text content to the center */
 }
 
 .bottom h4 {
@@ -98,17 +100,21 @@ nav img {
     letter-spacing: 5px;
     opacity: 0;
     animation: bottom 1s ease-in-out 0.6s forwards;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
 }
 
 .bottom h1 {
     color: white;
     font-family: var(--jos-font-family);
-    font-size: 50px;
+    font-size: 200px;
     font-weight: bold;
     letter-spacing: 1px;
     opacity: 0;
     animation: bottom 1s ease-in-out 0.2s forwards;
+    text-shadow: 2px 10px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
 }
+
+
 
 .bottom button {
     border: none;
@@ -741,36 +747,6 @@ body {
     transition: all 0.3s ease-in-out 0s;
 }
 
-#generic_price_table_home .grey {
-    background: #7F8C8D;
-    transition: all 0.3s ease-in-out 0s;
-}
-
-#generic_price_table_home .midnight {
-    background: #34495E;
-    transition: all 0.3s ease-in-out 0s;
-}
-
-#generic_price_table_home .orange {
-    background: #E67E22;
-    transition: all 0.3s ease-in-out 0s;
-}
-
-#generic_price_table_home .purple {
-    background: #9B59B6;
-    transition: all 0.3s ease-in-out 0s;
-}
-
-#generic_price_table_home .red {
-    background: #E74C3C;
-    transition: all 0.3s ease-in-out 0s;
-}
-
-#generic_price_table_home .turquoise {
-    background: #1ABC9C;
-    transition: all 0.3s ease-in-out 0s;
-}
-
 #generic_price_table_home .blue:hover, #generic_price_table_home .emerald:hover, #generic_price_table_home .grey:hover, #generic_price_table_home .midnight:hover, #generic_price_table_home .orange:hover, #generic_price_table_home .purple:hover, #generic_price_table_home .red:hover, #generic_price_table_home .turquoise:hover {
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
@@ -1083,24 +1059,24 @@ textarea.input {
     position: absolute;
     width: 110px;
     height: 100px;
-    border: 22px solid #1abc9c;
+    border: 22px solid #2ac5da;
     border-radius: 50%;
     bottom: -77px;
     right: 50px;
     opacity: 0.3;
   }
-  
+
   .big-circle {
     position: absolute;
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    background: linear-gradient(to bottom, #73e7fd, #18743e);
+    background: linear-gradient(to bottom, #73e7fd, #1f7186);
     bottom: 50%;
     right: 50%;
     transform: translate(-40%, 38%);
   }
-  
+
   .big-circle:after {
     content: "";
     position: absolute;
@@ -1111,7 +1087,7 @@ textarea.input {
     top: calc(50% - 180px);
     left: calc(50% - 180px);
   }
-  
+
   .square {
     position: absolute;
     height: 400px;
@@ -1125,102 +1101,102 @@ textarea.input {
     background: linear-gradient(135deg, transparent 20%, #73e7fd);
     position: absolute;
   }
-  
+
   .circle.one {
     width: 130px;
     height: 130px;
     top: 130px;
     right: -40px;
   }
-  
+
   .circle.two {
     width: 80px;
     height: 80px;
     top: 10px;
     right: 30px;
   }
-  
+
   @media (max-width: 850px) {
     .form {
       grid-template-columns: 1fr;
     }
-  
+
     .contact-info:before {
       bottom: initial;
       top: -75px;
       right: 65px;
       transform: scale(0.95);
     }
-  
+
     .contact-form:before {
       top: -13px;
       left: initial;
       right: 70px;
     }
-  
+
     .square {
       transform: translate(140%, 43%);
       height: 350px;
     }
-  
+
     .big-circle {
       bottom: 75%;
       transform: scale(0.9) translate(-40%, 30%);
       right: 50%;
     }
-  
+
     .text {
       margin: 1rem 0 1.5rem 0;
     }
-  
+
     .social-media {
       padding: 1.5rem 0 0 0;
     }
   }
-  
+
   @media (max-width: 480px) {
     .container {
       padding: 1.5rem;
     }
-  
+
     .contact-info:before {
       display: none;
     }
-  
+
     .square,
     .big-circle {
       display: none;
     }
-  
+
     form,
     .contact-info {
       padding: 1.7rem 1.6rem;
     }
-  
+
     .text,
     .information,
     .social-media p {
       font-size: 0.8rem;
     }
-  
+
     .title {
       font-size: 1.15rem;
     }
-  
+
     .social-icons a {
       width: 30px;
       height: 30px;
       line-height: 30px;
     }
-  
+
     .icon {
       width: 23px;
     }
-  
+
     .input {
       padding: 0.45rem 1.2rem;
     }
-  
+
     .btn {
       padding: 0.45rem 1.2rem;
     }

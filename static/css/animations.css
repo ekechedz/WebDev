@@ -102,21 +102,3 @@
         opacity: 1;
     }
 }
-
-/* @keyframes header{
-    0%{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/header.jpg);
-    }
-    25%{
-
-    }
-    50%{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/header.jpg);
-    }
-    75%{
-
-    }
-    100%{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/header.jpg);
-    }
-} */
