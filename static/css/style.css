@@ -6,6 +6,7 @@
 @import url('animations.css');
 @import url('about.css');
 @import url('hoverover.css');
+
 html {
     scroll-behavior: smooth;
 }
@@ -26,9 +27,12 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the video fills the header area */
-    z-index: -1; /* Keeps the video behind the content */
-    opacity: 0.8; /*trancperancy*/
+    object-fit: cover;
+    /* Ensures the video fills the header area */
+    z-index: -1;
+    /* Keeps the video behind the content */
+    opacity: 0.8;
+    /*trancperancy*/
 }
 
 .video-overlay {
@@ -37,8 +41,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2); /* Black with 20% opacity */
-    z-index: 0; /* Sits above the video but behind the content */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Black with 20% opacity */
+    z-index: 0;
+    /* Sits above the video but behind the content */
 }
 
 header {
@@ -88,10 +94,14 @@ nav img {
 
 .bottom {
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust to ensure the center of the element aligns with the screen center */
-    text-align: center; /* Align text content to the center */
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Adjust to ensure the center of the element aligns with the screen center */
+    text-align: center;
+    /* Align text content to the center */
 }
 
 .bottom h4 {
@@ -100,7 +110,8 @@ nav img {
     letter-spacing: 5px;
     opacity: 0;
     animation: bottom 1s ease-in-out 0.6s forwards;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Subtle text shadow */
 }
 
 .bottom h1 {
@@ -111,10 +122,9 @@ nav img {
     letter-spacing: 1px;
     opacity: 0;
     animation: bottom 1s ease-in-out 0.2s forwards;
-    text-shadow: 2px 10px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+    text-shadow: 2px 10px 4px rgba(0, 0, 0, 0.3);
+    /* Subtle text shadow */
 }
-
-
 
 .bottom button {
     border: none;
@@ -142,7 +152,8 @@ nav img {
     animation: inside-out 1s ease-in-out 0.4s forwards;
 }
 
-.bottom input:focus, button:focus {
+.bottom input:focus,
+button:focus {
     outline: none;
 }
 
@@ -168,6 +179,12 @@ nav img {
     .mobile {
         display: none;
     }
+    .video-overlay{
+        display:none;
+    }
+    .video{
+        display: none;
+    }
     nav .a {
         font-family: var(--jos-font-family);
         float: left;
@@ -179,63 +196,80 @@ nav img {
         text-align: right;
         opacity: 0;
     }
+
     nav .a:nth-child(2) {
         margin-left: 0%;
     }
+
     nav .a:nth-child(2) {
         animation: right 1s ease-in-out 0.0s forwards;
     }
+
     nav .a:nth-child(3) {
         animation: right 1s ease-in-out 0.2s forwards;
     }
+
     nav .a:nth-child(4) {
         animation: right 1s ease-in-out 0.4s forwards;
     }
+
     nav .a:nth-child(5) {
         animation: right 1s ease-in-out 0.6s forwards;
     }
+
     nav .a:nth-child(6) {
         animation: right 1s ease-in-out 0.8s forwards;
     }
+
     nav .a:nth-child(7) {
         animation: right 1s ease-in-out 1s forwards;
     }
+
     nav .social {
         display: none;
     }
+
     header nav img {
         position: absolute;
         float: left;
         top: 1em;
         left: 1em;
     }
-	.bottom {
-		position: absolute;
-		top: 50%; /* Center vertically */
-		left: 50%; /* Center horizontally */
-		transform: translate(-50%, -50%); /* Adjust to ensure the center of the element aligns with the screen center */
-		text-align: center; /* Align text content to the center */
-	}
 
-	.bottom h4 {
-		color: var(--primary-color);
-		font-family: var(--title-font-family);
-		letter-spacing: 5px;
-		opacity: 0;
-		animation: bottom 1s ease-in-out 0.6s forwards;
-		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
-	}
+    .bottom {
+        position: absolute;
+        top: 50%;
+        /* Center vertically */
+        left: 50%;
+        /* Center horizontally */
+        transform: translate(-50%, -50%);
+        /* Adjust to ensure the center of the element aligns with the screen center */
+        text-align: center;
+        /* Align text content to the center */
+    }
 
-	.bottom h1 {
-		color: white;
-		font-family: var(--jos-font-family);
-		font-size: 30px;
-		font-weight: bold;
-		letter-spacing: 1px;
-		opacity: 0;
-		animation: bottom 1s ease-in-out 0.2s forwards;
-		text-shadow: 2px 10px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
-	}
+    .bottom h4 {
+        color: var(--primary-color);
+        font-family: var(--title-font-family);
+        letter-spacing: 5px;
+        opacity: 0;
+        animation: bottom 1s ease-in-out 0.6s forwards;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        /* Subtle text shadow */
+    }
+
+    .bottom h1 {
+        color: white;
+        font-family: var(--jos-font-family);
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        opacity: 0;
+        animation: bottom 1s ease-in-out 0.2s forwards;
+        text-shadow: 2px 10px 4px rgba(0, 0, 0, 0.3);
+        /* Subtle text shadow */
+    }
+
     .bottom button {
         border: none;
         background: var(--primary-color);
@@ -245,19 +279,121 @@ nav img {
         opacity: 0;
         animation: inside-out 1s ease-in-out 0.4s forwards;
     }
+
     .bottom input {
         display: none;
     }
 }
 
 @media (min-width: 500px) and (max-width: 1000px) {
-    header {
+
+    /* header {
+        display: none;
+    } */
+    nav .a {
+        font-family: var(--jos-font-family);
+        float: left;
+        padding: 20px 0px;
+        width: 100%;
+        font-size: 16px;
+        text-decoration: none;
+        color: white;
+        text-align: right;
+        opacity: 0;
+    }
+
+    nav .a:nth-child(2) {
+        margin-left: 0%;
+    }
+
+    nav .a:nth-child(2) {
+        animation: right 1s ease-in-out 0.0s forwards;
+    }
+
+    nav .a:nth-child(3) {
+        animation: right 1s ease-in-out 0.2s forwards;
+    }
+
+    nav .a:nth-child(4) {
+        animation: right 1s ease-in-out 0.4s forwards;
+    }
+
+    nav .a:nth-child(5) {
+        animation: right 1s ease-in-out 0.6s forwards;
+    }
+
+    nav .a:nth-child(6) {
+        animation: right 1s ease-in-out 0.8s forwards;
+    }
+
+    nav .a:nth-child(7) {
+        animation: right 1s ease-in-out 1s forwards;
+    }
+
+    nav .social {
         display: none;
     }
+
+    header nav img {
+        position: absolute;
+        float: left;
+        top: 1em;
+        left: 1em;
+    }
+
+    .bottom {
+        position: absolute;
+        top: 50%;
+        /* Center vertically */
+        left: 50%;
+        /* Center horizontally */
+        transform: translate(-50%, -50%);
+        /* Adjust to ensure the center of the element aligns with the screen center */
+        text-align: center;
+        /* Align text content to the center */
+    }
+
+    .bottom h4 {
+        color: var(--primary-color);
+        font-family: var(--title-font-family);
+        letter-spacing: 5px;
+        opacity: 0;
+        animation: bottom 1s ease-in-out 0.6s forwards;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        /* Subtle text shadow */
+    }
+
+    .bottom h1 {
+        color: white;
+        font-family: var(--jos-font-family);
+        font-size: 45px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        opacity: 0;
+        animation: bottom 1s ease-in-out 0.2s forwards;
+        text-shadow: 2px 10px 4px rgba(0, 0, 0, 0.3);
+        /* Subtle text shadow */
+    }
+
+    .bottom button {
+        border: none;
+        background: var(--primary-color);
+        color: white;
+        font-size: 30px;
+        padding: 15px 100px;
+        opacity: 0;
+        animation: inside-out 1s ease-in-out 0.4s forwards;
+    }
+
+    .bottom input {
+        display: none;
+    }
+
     .mobile {
         text-align: center;
         padding: 1em;
     }
+
     .mobile img {
         height: 10em;
     }
@@ -277,39 +413,50 @@ nav img {
         border-bottom: 2px solid transparent;
         transform: translateY(-5em);
     }
+
     nav .a:nth-child(2) {
         animation: navbar 3s ease-in-out 0.0s forwards;
     }
+
     nav .a:nth-child(3) {
         animation: navbar 3s ease-in-out 0.1s forwards;
     }
+
     nav .a:nth-child(4) {
         animation: navbar 3s ease-in-out 0.2s forwards;
     }
+
     nav .a:nth-child(5) {
         animation: navbar 3s ease-in-out 0.3s forwards;
     }
+
     nav .a:nth-child(6) {
         animation: navbar 3s ease-in-out 0.4s forwards;
     }
+
     /* addition */
     nav .a:nth-child(7) {
         animation: navbar 3s ease-in-out 0.5s forwards;
     }
+
     /* --------- */
     /**/
     nav .social:nth-child(7) {
         animation: social 1s ease-in-out 3.0s forwards;
     }
+
     nav .social:nth-child(8) {
         animation: social 1s ease-in-out 2.8s forwards;
     }
+
     nav .social:nth-child(9) {
         animation: social 1s ease-in-out 2.6s forwards;
     }
+
     nav .social:nth-child(10) {
         animation: social 1s ease-in-out 2.4s forwards;
     }
+
     nav .social:nth-child(11) {
         animation: social 1s ease-in-out 2.2s forwards;
     }
@@ -319,6 +466,7 @@ nav img {
     .bottom h1 {
         font-size: 30px;
     }
+
     .bottom button {
         font-size: 16px;
         padding: 15px 90px;
@@ -337,7 +485,8 @@ nav img {
     padding-top: 4rem;
 }
 
-.col-sm-12, .col-md12 {
+.col-sm-12,
+.col-md12 {
     position: relative;
     width: 100%;
 }
@@ -387,12 +536,14 @@ p {
 
 /* Service Card with Background Image */
 .service-card {
-    position: relative; /* Needed for the pseudo-element */
+    position: relative;
+    /* Needed for the pseudo-element */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow for better readability */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    /* Subtle shadow for better readability */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -400,36 +551,44 @@ p {
     height: 350px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Aligns the text to the bottom of the card */
+    justify-content: flex-end;
+    /* Aligns the text to the bottom of the card */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 /* Pseudo-element for dark overlay */
 .service-card::before {
-    content: ''; /* Creates an empty element */
+    content: '';
+    /* Creates an empty element */
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+    background: rgba(0, 0, 0, 0.4);
+    /* Semi-transparent black overlay */
     border-radius: 10px;
-    z-index: 1; /* Ensures the overlay stays behind the text */
+    z-index: 1;
+    /* Ensures the overlay stays behind the text */
 }
 
 /* Title and Description */
 .service-card h3 {
     font-size: 1.5em;
     margin-bottom: 3px;
-    position: relative; /* Enables positioning */
-    top: -100px; /* Moves the text 10px upwards */
-    z-index: 2; /* Ensures text stays above the overlay */
+    position: relative;
+    /* Enables positioning */
+    top: -100px;
+    /* Moves the text 10px upwards */
+    z-index: 2;
+    /* Ensures text stays above the overlay */
 }
 
 .service-card p {
     font-size: 1em;
     line-height: 1.5;
-    z-index: 2; /* Ensures text stays above the overlay */
+    z-index: 2;
+    /* Ensures text stays above the overlay */
 }
 
 /* Hover Effect */
@@ -453,6 +612,7 @@ p {
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700italic,700,900italic,900);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
+
 body {
     background-color: #eee;
 }
@@ -520,16 +680,19 @@ body {
     color: #73e7fd;
 }
 
-#generic_price_table .generic_content.active .generic_head_price .generic_head_content .head_bg, #generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head_bg {
+#generic_price_table .generic_content.active .generic_head_price .generic_head_content .head_bg,
+#generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head_bg {
     border-color: #73e7fd rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #73e7fd;
     color: #fff;
 }
 
-#generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head span, #generic_price_table .generic_content.active .generic_head_price .generic_head_content .head span {
+#generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head span,
+#generic_price_table .generic_content.active .generic_head_price .generic_head_content .head span {
     color: #fff;
 }
 
-#generic_price_table .generic_content:hover .generic_price_btn a, #generic_price_table .generic_content.active .generic_price_btn a {
+#generic_price_table .generic_content:hover .generic_price_btn a,
+#generic_price_table .generic_content.active .generic_price_btn a {
     background-color: #73e7fd;
     color: #fff;
 }
@@ -667,7 +830,16 @@ body {
     text-transform: uppercase;
 }
 
-#generic_price_table .generic_content, #generic_price_table .generic_content:hover, #generic_price_table .generic_content .generic_head_price .generic_head_content .head_bg, #generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head_bg, #generic_price_table .generic_content .generic_head_price .generic_head_content .head h2, #generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head h2, #generic_price_table .generic_content .price, #generic_price_table .generic_content:hover .price, #generic_price_table .generic_content .generic_price_btn a, #generic_price_table .generic_content:hover .generic_price_btn a {
+#generic_price_table .generic_content,
+#generic_price_table .generic_content:hover,
+#generic_price_table .generic_content .generic_head_price .generic_head_content .head_bg,
+#generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head_bg,
+#generic_price_table .generic_content .generic_head_price .generic_head_content .head h2,
+#generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head h2,
+#generic_price_table .generic_content .price,
+#generic_price_table .generic_content:hover .price,
+#generic_price_table .generic_content .generic_price_btn a,
+#generic_price_table .generic_content:hover .generic_price_btn a {
     transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
     -ms-transition: all 0.3s ease-in-out 0s;
@@ -688,10 +860,12 @@ body {
         float: left;
         width: 50%;
     }
+
     #generic_price_table .col-md-4 {
         float: left;
         width: 50%;
     }
+
     #generic_price_table .generic_content {
         margin-bottom: 75px;
     }
@@ -705,7 +879,8 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-.text-center h1, .text-center h1 a {
+.text-center h1,
+.text-center h1 a {
     color: #7885CB;
     font-size: 30px;
     font-weight: 300;
@@ -753,7 +928,14 @@ body {
     transition: all 0.3s ease-in-out 0s;
 }
 
-#generic_price_table_home .blue:hover, #generic_price_table_home .emerald:hover, #generic_price_table_home .grey:hover, #generic_price_table_home .midnight:hover, #generic_price_table_home .orange:hover, #generic_price_table_home .purple:hover, #generic_price_table_home .red:hover, #generic_price_table_home .turquoise:hover {
+#generic_price_table_home .blue:hover,
+#generic_price_table_home .emerald:hover,
+#generic_price_table_home .grey:hover,
+#generic_price_table_home .midnight:hover,
+#generic_price_table_home .orange:hover,
+#generic_price_table_home .purple:hover,
+#generic_price_table_home .red:hover,
+#generic_price_table_home .turquoise:hover {
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     border-top-left-radius: 50px;
@@ -973,7 +1155,8 @@ textarea.input {
     z-index: 500;
 }
 
-.input-container span::before, .input-container span::after {
+.input-container span::before,
+.input-container span::after {
     content: "";
     position: absolute;
     width: 10%;
@@ -1000,7 +1183,8 @@ textarea.input {
     font-size: 0.8rem;
 }
 
-.input-container.focus span:before, .input-container.focus span:after {
+.input-container.focus span:before,
+.input-container.focus span:after {
     width: 50%;
     opacity: 1;
 }
@@ -1070,9 +1254,9 @@ textarea.input {
     bottom: -77px;
     right: 50px;
     opacity: 0.3;
-  }
+}
 
-  .big-circle {
+.big-circle {
     position: absolute;
     width: 500px;
     height: 500px;
@@ -1081,9 +1265,9 @@ textarea.input {
     bottom: 50%;
     right: 50%;
     transform: translate(-40%, 38%);
-  }
+}
 
-  .big-circle:after {
+.big-circle:after {
     content: "";
     position: absolute;
     width: 360px;
@@ -1092,118 +1276,119 @@ textarea.input {
     border-radius: 50%;
     top: calc(50% - 180px);
     left: calc(50% - 180px);
-  }
+}
 
-  .square {
+.square {
     position: absolute;
     height: 400px;
     top: 50%;
     left: 50%;
     transform: translate(181%, 11%);
     opacity: 0.2;
-  }
-  .circle {
+}
+
+.circle {
     border-radius: 50%;
     background: linear-gradient(135deg, transparent 20%, #73e7fd);
     position: absolute;
-  }
+}
 
-  .circle.one {
+.circle.one {
     width: 130px;
     height: 130px;
     top: 130px;
     right: -40px;
-  }
+}
 
-  .circle.two {
+.circle.two {
     width: 80px;
     height: 80px;
     top: 10px;
     right: 30px;
-  }
+}
 
-  @media (max-width: 850px) {
+@media (max-width: 850px) {
     .form {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
 
     .contact-info:before {
-      bottom: initial;
-      top: -75px;
-      right: 65px;
-      transform: scale(0.95);
+        bottom: initial;
+        top: -75px;
+        right: 65px;
+        transform: scale(0.95);
     }
 
     .contact-form:before {
-      top: -13px;
-      left: initial;
-      right: 70px;
+        top: -13px;
+        left: initial;
+        right: 70px;
     }
 
     .square {
-      transform: translate(140%, 43%);
-      height: 350px;
+        transform: translate(140%, 43%);
+        height: 350px;
     }
 
     .big-circle {
-      bottom: 75%;
-      transform: scale(0.9) translate(-40%, 30%);
-      right: 50%;
+        bottom: 75%;
+        transform: scale(0.9) translate(-40%, 30%);
+        right: 50%;
     }
 
     .text {
-      margin: 1rem 0 1.5rem 0;
+        margin: 1rem 0 1.5rem 0;
     }
 
     .social-media {
-      padding: 1.5rem 0 0 0;
+        padding: 1.5rem 0 0 0;
     }
-  }
+}
 
-  @media (max-width: 480px) {
+@media (max-width: 480px) {
     .container {
-      padding: 1.5rem;
+        padding: 1.5rem;
     }
 
     .contact-info:before {
-      display: none;
+        display: none;
     }
 
     .square,
     .big-circle {
-      display: none;
+        display: none;
     }
 
     form,
     .contact-info {
-      padding: 1.7rem 1.6rem;
+        padding: 1.7rem 1.6rem;
     }
 
     .text,
     .information,
     .social-media p {
-      font-size: 0.8rem;
+        font-size: 0.8rem;
     }
 
     .title {
-      font-size: 1.15rem;
+        font-size: 1.15rem;
     }
 
     .social-icons a {
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
     }
 
     .icon {
-      width: 23px;
+        width: 23px;
     }
 
     .input {
-      padding: 0.45rem 1.2rem;
+        padding: 0.45rem 1.2rem;
     }
 
     .btn {
-      padding: 0.45rem 1.2rem;
+        padding: 0.45rem 1.2rem;
     }
-  }
+}

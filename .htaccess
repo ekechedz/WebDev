@@ -1,0 +1,9 @@
+# Allow everyone access to the directory and files
+Order Allow,Deny
+Allow from all
+
+# Serve HTML files normally
+AddType text/html .html
+
+# Disable directory browsing for security
+Options -Indexes
